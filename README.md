@@ -39,6 +39,7 @@ tic_tac_toe/
 ├── .gitignore                # Specifies ignored files and directories
 ├── README.md                 # Project documentation
 ├── requirements.txt          # Required packages for the project
+├── LICENSE          # MIT license
 ```
 
 ---
