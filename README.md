@@ -23,20 +23,22 @@ A simple command-line implementation of the classic **Tic Tac Toe** game, writte
 
 ```
 tic_tac_toe/
-├── main.py                # Entry point to start the game
-├── models/                # Core game classes
+├── main.py                   # Entry point to start the game
+├── models/                   # Core game classes
 │   ├── __init__.py
-│   ├── board.py           # Handles the game board and logic
-│   ├── player.py          # Manages human and AI players
-├── utils/                 # Support functions
+│   ├── board.py              # Handles the game board and logic
+│   ├── player.py             # Manages human and AI players
+├── utils/                    # Support functions
 │   ├── __init__.py
-│   ├── game_logic.py      # Orchestrates the game flow
-│   ├── game_data.py       # Stores game outcomes in a CSV file
-├── data/                  # Stores generated game data
-│   ├── game_data.csv      # Records first player and winner
-├── .gitignore             # Specifies ignored files and directories
-├── README.md              # Project documentation
-├── requirements.txt       # Required packages for the project
+│   ├── game_logic.py         # Orchestrates the game flow
+│   ├── game_data.py          # Stores game outcomes in a CSV file
+├── data/                     # Stores generated game data
+│   ├── game_data.csv         # Records first player and winner
+├── tests/                    # Stores generated game data
+│   ├── test_check_winner.py  # Unit test of check_winner method
+├── .gitignore                # Specifies ignored files and directories
+├── README.md                 # Project documentation
+├── requirements.txt          # Required packages for the project
 ```
 
 ---
