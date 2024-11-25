@@ -46,20 +46,36 @@ tic_tac_toe/
 ## Installation and Usage
 
 **Get Code**
+
 ```
 git clone https://github.com/luyaoniu-uw/TECHIN509-Assignment-Week10.git
 ```
+
 **Build Environment**
+
 ```
 cd TECHIN509-Assignment-Week10
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
 **Customization**
 
 Customize the maximum number of attempts of AI player by changing `max_attempts`.
 
+**How to use**
+
+For MacOS users, use
+```
+python3 main.py
+```
+For Windows users, use
+```
+python main.py
+```
+
+Type the row and column indices in terminal as prompted, separated by space, until game stops.
 
 
 ## License
