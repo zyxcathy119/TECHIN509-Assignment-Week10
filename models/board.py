@@ -58,7 +58,7 @@ class Board:
             str: The winning symbol ('X' or 'O') if there is a winner, else an empty string
         """
         def sameLine(sign1, sign2, sign3):
-            return sign1 == sign2 and sign2 == sign3
+            return (sign1 == 'X' or sign1 == 'O') and sign1 == sign2 and sign2 == sign3
         
         for i in range(3):
             if sameLine(board[i][0], board[i][1], board[i][2]):
