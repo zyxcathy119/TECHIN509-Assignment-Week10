@@ -50,13 +50,29 @@ class Board:
             return True
         return False
 
-    def check_winner(self) -> str:
+    def check_winner(self, board) -> str:
         """
         Check the winner of the current board
 
         Returns:
             str: The winning symbol ('X' or 'O') if there is a winner, else an empty string
         """
+        def sameLine(sign1, sign2, sign3):
+            return sign1 == sign2 and sign2 == sign3
+        
+        for i in range(3):
+            if sameLine(board[i][0], board[i][1], board[i][2]):
+                return board[i][0]
+            if sameLine(board[0][i], board[1][i], board[2][i]):
+                return board[0][i]
+        if sameLine(board[0][0], board[1][1], board[2][2]):
+            return board[0][0]
+        if sameLine(board[0][2], board[1][1], board[2][0]):
+            return board[0][2]
+        return None
+
+
+
 
     def is_full(self) -> bool:
         """
