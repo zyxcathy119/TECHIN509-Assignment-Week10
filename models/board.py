@@ -1,11 +1,40 @@
 class Board:
     def __init__(self):
         self.grid = [[" " for _ in range(3)] for _ in range(3)]
+    
 
-    def draw_board(self):
+
+    def draw_board(self, board):
         """
-        Draw the board of Tic-Tac-Toe game
+        Draw the board of a Tic-Tac-Toe game.
+        This function takes a 2D list representing the Tic-Tac-Toe board and prints it in a formatted way.
+        Empty cells are represented by spaces, and cells occupied by players are represented by 'X' or 'O'.
+        Args:
+            board (list of list of str): A 2D list representing the Tic-Tac-Toe board. Each element should be 'X', 'O', or an empty string.
+        Returns:
+            None
         """
+
+        def regular_board(n1, n2, board):
+            for i in range(n1):
+                for j in range(n2):
+                    if board[i][j] != 'X' and board[i][j] != 'O':
+                        board[i][j] = ' '
+            return board
+    
+        if not board:
+            return
+        n1 = len(board)
+        n2 = len(board[0])
+        sign1 = " ---"
+        sign2 = " | "
+        board = regular_board(n1, n2, board)
+        for i in range(n1):
+            print(" "+sign1 * n2)
+            print("".join([sign2+x for x in board[i]])+sign2)
+        print(" "+sign1 * n2)
+        return 
+
 
     def update_board(self, row: int, col: int, symbol: str) -> bool:
         """
