@@ -4,17 +4,16 @@ class Board:
     
 
 
-    def draw_board(self, board):
+    def draw_board(self):
         """
         Draw the board of a Tic-Tac-Toe game.
         This function takes a 2D list representing the Tic-Tac-Toe board and prints it in a formatted way.
         Empty cells are represented by spaces, and cells occupied by players are represented by 'X' or 'O'.
-        Args:
-            board (list of list of str): A 2D list representing the Tic-Tac-Toe board. Each element should be 'X', 'O', or an empty string.
+ 
         Returns:
             None
         """
-
+        board = self.grid
         def regular_board(n1, n2, board):
             for i in range(n1):
                 for j in range(n2):
@@ -50,13 +49,14 @@ class Board:
             return True
         return False
 
-    def check_winner(self, board) -> str:
+    def check_winner(self) -> str:
         """
         Check the winner of the current board
 
         Returns:
             str: The winning symbol ('X' or 'O') if there is a winner, else an empty string
         """
+        board = self.grid
         def sameLine(sign1, sign2, sign3):
             return (sign1 == 'X' or sign1 == 'O') and sign1 == sign2 and sign2 == sign3
         

@@ -15,7 +15,7 @@ def test_check_winner():
         ["X", "X", "O"],
         ["O", "X", "O"]
     ]
-    assert board.check_winner(board.grid) == None
+    assert board.check_winner() == None
 
     # Test case 2: Horizontal winner
     board.grid = [
@@ -23,7 +23,7 @@ def test_check_winner():
         ["O", "O", " "],
         [" ", " ", " "]
     ]
-    assert board.check_winner(board.grid) == "X"
+    assert board.check_winner() == "X"
 
     # Test case 3: Vertical winner
     board.grid = [
@@ -31,7 +31,7 @@ def test_check_winner():
         ["O", "X", " "],
         ["O", " ", "X"]
     ]
-    assert board.check_winner(board.grid) == "O"
+    assert board.check_winner() == "O"
 
     # Test case 4: Diagonal winner
     board.grid = [
@@ -39,7 +39,7 @@ def test_check_winner():
         ["O", "X", " "],
         [" ", "O", "X"]
     ]
-    assert board.check_winner(board.grid) == "X"
+    assert board.check_winner() == "X"
 
     # Test case 5: Another diagonal winner
     board.grid = [
@@ -47,7 +47,7 @@ def test_check_winner():
         ["X", "O", " "],
         ["X", " ", "O"]
     ]
-    assert board.check_winner(board.grid) == "O"
+    assert board.check_winner() == "O"
 
     # Test case 6: Empty board
     board.grid = [
@@ -55,7 +55,7 @@ def test_check_winner():
         [" ", " ", " "],
         [" ", " ", " "]
     ]
-    assert board.check_winner(board.grid) == None
+    assert board.check_winner() == None
 
     # Test case 7: Full board with no winner
     board.grid = [
@@ -63,7 +63,7 @@ def test_check_winner():
         ["O", "X", "O"],
         ["O", "X", "O"]
     ]
-    assert board.check_winner(board.grid) == None
+    assert board.check_winner() == None
 
     # Test case 8: Horizontal winner in the last row
     board.grid = [
@@ -71,7 +71,7 @@ def test_check_winner():
         ["O", "X", " "],
         ["X", "X", "X"]
     ]
-    assert board.check_winner(board.grid) == "X"
+    assert board.check_winner() == "X"
 
     # Test case 9: Vertical winner in the last column
     board.grid = [
@@ -79,7 +79,7 @@ def test_check_winner():
         ["X", " ", "O"],
         [" ", "X", "O"]
     ]
-    assert board.check_winner(board.grid) == "O"
+    assert board.check_winner() == "O"
 
     # Test case 10: Diagonal winner from top-right to bottom-left
     board.grid = [
@@ -87,4 +87,4 @@ def test_check_winner():
         ["O", "O", "X"],
         ["O", "X", "X"]
     ]
-    assert board.check_winner(board.grid) == "O"
+    assert board.check_winner() == "O"
